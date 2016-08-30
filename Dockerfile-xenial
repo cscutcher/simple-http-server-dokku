@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y \
 
 ENTRYPOINT ["/bin/docker-http-server.sh"]
 EXPOSE 80
-VOLUME /var/www/localhost/htdocs
 
 COPY lighttpd-common.conf /etc/lighttpd/lighttpd-common.conf
 COPY lighttpd-xenial.conf /etc/lighttpd/lighttpd.conf
